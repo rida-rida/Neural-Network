@@ -1,3 +1,5 @@
+Trains a simple CNN on the MNIST database
+
 from __future__ import print_function
 import keras
 from keras.datasets import mnist
