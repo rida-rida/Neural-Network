@@ -7,13 +7,12 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 from keras import optimizers
-from keras.datasets import cifar10
 from keras import backend as K
 batch_size = 128
 num_classes = 10
 epochs = 5
 img_rows, img_cols = 28, 28
-(x_train, y_train), (x_test, y_test) = cifar10.load_data()
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
 x_train = x_train.reshape(x_train.shape[0], img_rows, img_cols,1)
 x_test = x_test.reshape(x_test.shape[0],  img_rows, img_cols,1)
 input_shape = (img_rows,img_cols,1)
