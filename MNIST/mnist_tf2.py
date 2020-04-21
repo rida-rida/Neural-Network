@@ -38,13 +38,8 @@ class MyModel(tf.keras.Model):
     x = self.flatten(x)
     x = self.d1(x)
     return self.d2(x)
-def get_model():
-	 model = MyModel()
-	 model.build(input_shape=(None, 28,28,1))
-	 model.summary()
-	 return model
 
-model = get_model()
+model = MyModel()
 loss_ob = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 optimizer = tf.keras.optimizers.Adam()
 cross_entropy = tf.keras.losses.BinaryCrossentropy(from_logits=True)
