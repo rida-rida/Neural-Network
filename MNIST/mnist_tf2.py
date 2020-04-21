@@ -81,10 +81,10 @@ def test_step(images, labels):
 EPOCHS = 50
 def train(dataset, epochs):
   for epoch in range(epochs):
-    start = time.time()
+    #start = time.time()
 
     for images, labels in train_ds:
-      #train_step(images,labels)
+      train_step(images,labels)
 
     for test_images, test_labels in test_ds:
     	test_step(test_images, test_labels)
