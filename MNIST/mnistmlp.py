@@ -71,11 +71,7 @@ class mlp:
 
 
 	def test_model(self):
-		# self.iris = load_iris()
-		# self.X_test = self.iris.data[:2,:] # features data
-		# self.Y_test = self.iris.target[:2]
-
-
+		
 		self.classes = self.model.predict_classes(self.X_test, batch_size=120)
 
 		#get accuration
